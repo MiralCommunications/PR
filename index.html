@@ -311,24 +311,22 @@
             <div class="grid md:grid-cols-3 gap-6 mb-12">
                 <div class="p-6 bg-gray-50 rounded-xl border border-gray-200 flex items-center justify-between">
                     <div>
-                        <!-- 1. 공식 CI / 로고 팩 -->
                         <h4 class="font-bold text-gray-900 text-sm">공식 CI / 로고 팩</h4>
                         <p class="text-xs text-gray-500 mt-1">AI, PNG high-res</p>
                     </div>
                     <a href="miral_logo.zip" download class="px-3 py-2 bg-white border border-gray-300 rounded-lg text-xs font-bold hover:border-miral-green hover:text-miral-green transition-colors inline-flex items-center">
-    <i class="fa-solid fa-download mr-1"></i> 받기
-                    </button>
+                        <i class="fa-solid fa-download mr-1"></i> 받기
+                    </a>
                 </div>
 
                 <div class="p-6 bg-gray-50 rounded-xl border border-gray-200 flex items-center justify-between">
                     <div>
-                        <!-- 2. 2026 프레스킷 PDF -->
                         <h4 class="font-bold text-gray-900 text-sm">2025 연차보고서 PDF</h4>
                         <p class="text-xs text-gray-500 mt-1">전체 사업 소개서 (13p)</p>
                     </div>
-                   <a href="2025_Report.pdf" download class="px-3 py-2 bg-white border border-gray-300 rounded-lg text-xs font-bold hover:border-miral-green hover:text-miral-green transition-colors inline-flex items-center">
-    <i class="fa-solid fa-download mr-1"></i> 받기
-                    </button>
+                    <a href="2025_Report.pdf" download class="px-3 py-2 bg-white border border-gray-300 rounded-lg text-xs font-bold hover:border-miral-green hover:text-miral-green transition-colors inline-flex items-center">
+                        <i class="fa-solid fa-download mr-1"></i> 받기
+                    </a>
                 </div>
 
                 <div class="p-6 bg-gray-50 rounded-xl border border-gray-200 flex items-center justify-between">
@@ -363,7 +361,7 @@
                                 <h4 class="font-bold text-base">이수은 실장</h4>
                                 <p class="text-xs text-gray-400">selee@miral.org | 02-6411-3571</p>
                             </div>
-                            <a href="mailto:selee@miral.org" class="text-xs bg-gray-700 hover:bg-miral-green px-3 py-2 rounded font-semibold transition-colors">메일 보낼기</a>
+                            <a href="mailto:selee@miral.org" class="text-xs bg-gray-700 hover:bg-miral-green px-3 py-2 rounded font-semibold transition-colors">메일 보내기</a>
                         </div>
 
                         <div class="p-4 bg-gray-800/60 rounded-xl border border-gray-700/50 flex justify-between items-center">
@@ -391,32 +389,33 @@
                     <h3 class="text-xl font-bold mb-6 flex items-center">
                         <i class="fa-solid fa-paper-plane text-miral-red mr-2"></i> Quick 취재 및 자료 요청 Form
                     </h3>
-                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('취재 요청이 성공적으로 전달되었습니다.');">
+                    
+                    <form action="https://formsubmit.co/pr@miral.org" method="POST" class="space-y-4">
                         <div class="grid grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-xs text-gray-400 mb-1">언론사명 *</label>
-                                <input type="text" required placeholder="예: OO일보" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-miral-green">
+                                <input type="text" name="company" required placeholder="예: OO일보" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-miral-green">
                             </div>
                             <div>
                                 <label class="block text-xs text-gray-400 mb-1">기자 성함 *</label>
-                                <input type="text" required placeholder="홍길동" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-miral-green">
+                                <input type="text" name="reporter_name" required placeholder="홍길동" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-miral-green">
                             </div>
                         </div>
 
                         <div class="grid grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-xs text-gray-400 mb-1">이메일 *</label>
-                                <input type="email" required placeholder="reporter@media.com" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-miral-green">
+                                <input type="email" name="email" required placeholder="reporter@media.com" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-miral-green">
                             </div>
                             <div>
                                 <label class="block text-xs text-gray-400 mb-1">연락처 *</label>
-                                <input type="tel" required placeholder="010-0000-0000" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-miral-green">
+                                <input type="tel" name="phone" required placeholder="010-0000-0000" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-miral-green">
                             </div>
                         </div>
 
                         <div>
                             <label class="block text-xs text-gray-400 mb-1">취재 목적 및 희망 내용 *</label>
-                            <textarea rows="4" required placeholder="취재 희망 사업 및 가망 보도 일정 등을 적어주시면 빠른 연결을 도와드립니다." class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-miral-green"></textarea>
+                            <textarea name="message" rows="4" required placeholder="취재 희망 사업 및 가망 보도 일정 등을 적어주시면 빠른 연결을 도와드립니다." class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-miral-green"></textarea>
                         </div>
 
                         <button type="submit" class="w-full bg-miral-green hover:bg-emerald-600 text-white font-bold py-3 rounded-lg shadow-lg transition-colors">
