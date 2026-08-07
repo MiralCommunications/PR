@@ -401,7 +401,7 @@
         </div>
     </section>
 
-    <!-- 2026 Schedule Section -->
+    <!-- 2026 Schedule Section (타임라인 레이아웃 완전 복원) -->
     <section id="schedule" class="py-20 bg-miral-gray border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -412,13 +412,14 @@
                 <p class="text-gray-500 text-sm mt-2 md:mt-0">기자님의 사전 취재 및 기획 기사 준비를 위한 월별 주요 이슈 타임라인입니다.</p>
             </div>
 
-            <div id="schedule-timeline" class="relative border-l-2 border-miral-green/30 ml-4 md:ml-32 space-y-8">
-                <!-- 구글 시트 schedule 탭에서 동적 연동됨 -->
+            <!-- 정밀 레이아웃 적용된 타임라인 박스 -->
+            <div class="max-w-4xl mx-auto relative pl-12 md:pl-28 border-l-2 border-miral-green/30 space-y-10" id="schedule-timeline">
+                <!-- 구글 시트 schedule 탭 데이터가 동적 동기화됨 -->
             </div>
         </div>
     </section>
 
-    <!-- Media & Asset Download Section (자료실 정제 완료) -->
+    <!-- Media & Asset Download Section -->
     <section id="media" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -486,7 +487,7 @@
         </div>
     </section>
 
-    <!-- Contact & PR Office Section (FormSubmit 전환 완료) -->
+    <!-- Contact & PR Office Section -->
     <section id="contact" class="py-20 bg-gray-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12">
@@ -522,9 +523,7 @@
                     <h3 class="text-xl font-bold mb-6 flex items-center">
                         <i class="fa-solid fa-paper-plane text-miral-red mr-2"></i> Quick 취재 및 자료 요청 Form
                     </h3>
-                    <!-- FormSubmit 서비스 연결 (pr@miral.org 메일로 직접 전송) -->
                     <form class="space-y-4" action="https://formsubmit.co/pr@miral.org" method="POST">
-                        <!-- 스팸 방지 및 자동 리다이렉트 설정 -->
                         <input type="hidden" name="_subject" value="[밀알복지재단 WEB PRESS KIT] 취재 요청이 접수되었습니다.">
                         <input type="hidden" name="_captcha" value="false">
 
@@ -615,16 +614,14 @@
         </div>
     </div>
 
-    <!-- Engine Script (100% 오류 없는 실행 엔진) -->
+    <!-- Engine Script (안전한 키-값 수신 파서) -->
     <script>
-        // 1. 구글 시트 탭별 CSV 주소
         const SHEET_URLS = {
             main_stats: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSRMRgMOShdisQGmPIOTiQS9jUbfdFmS5BACgkGbK002r2uoXspaX1yYcJERNqAnXnR7x4nGvCz5pMg/pub?gid=482435986&single=true&output=csv',
             project_modals: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSRMRgMOShdisQGmPIOTiQS9jUbfdFmS5BACgkGbK002r2uoXspaX1yYcJERNqAnXnR7x4nGvCz5pMg/pub?gid=1349697879&single=true&output=csv',
             schedule: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSRMRgMOShdisQGmPIOTiQS9jUbfdFmS5BACgkGbK002r2uoXspaX1yYcJERNqAnXnR7x4nGvCz5pMg/pub?gid=1377596299&single=true&output=csv'
         };
 
-        // 2. 구글 드라이브 공유 링크
         const DRIVE_LINKS = {
             logo_zip: "https://drive.google.com/file/d/1_oLv-YAz81lIKPJCvaLCXNWtwqyU_FSz/view?usp=sharing",
             img_folder: "https://drive.google.com/drive/folders/1Kmb6XZnmAmRPShfT_1thS2WeKdG88Lsx?usp=drive_link",
@@ -637,8 +634,9 @@
             if (menu) menu.classList.toggle('hidden');
         }
 
+        // CSV 정밀 분석 파서
         function parseCSV(text) {
-            const lines = text.trim().split('\n');
+            const lines = text.trim().split(/\r?\n/);
             return lines.map(line => {
                 const values = [];
                 let insideQuote = false;
@@ -725,28 +723,36 @@
             } catch (e) { console.error('main_stats 로드 실패:', e); }
         }
 
+        // 헤더 인덱스 기반 안전 수치 추출
         async function loadProjectModals() {
             try {
                 const res = await fetch(SHEET_URLS.project_modals);
                 const text = await res.text();
                 const rows = parseCSV(text);
-                const headers = rows.shift();
+                if (rows.length < 2) return;
+                
+                const headers = rows.shift().map(h => h.trim());
 
                 rows.forEach(row => {
+                    if (row.length === 0 || !row[0]) return;
+                    
                     const item = {};
-                    headers.forEach((h, i) => item[h] = row[i]);
+                    headers.forEach((h, i) => item[h] = row[i] ? row[i] : '');
                     const key = item.project_key;
                     
                     if (key && projectData[key]) {
                         if (item.title) projectData[key].title = item.title;
                         if (item.description) projectData[key].description = item.description;
                         
-                        projectData[key].stats = [
-                            { label: item.stat1_label || '주요 지표 1', value: item.stat1_val || '-' },
-                            { label: item.stat2_label || '주요 지표 2', value: item.stat2_val || '-' },
-                            { label: item.stat3_label || '주요 지표 3', value: item.stat3_val || '-' }
-                        ];
+                        // 지표 파싱
+                        const statList = [];
+                        if (item.stat1_label && item.stat1_val) statList.push({ label: item.stat1_label, value: item.stat1_val });
+                        if (item.stat2_label && item.stat2_val) statList.push({ label: item.stat2_label, value: item.stat2_val });
+                        if (item.stat3_label && item.stat3_val) statList.push({ label: item.stat3_label, value: item.stat3_val });
+                        
+                        if (statList.length > 0) projectData[key].stats = statList;
 
+                        // 보도자료 파싱
                         const pressList = [];
                         if (item.press1_title) pressList.push({ title: item.press1_title, date: item.press1_date, summary: item.press1_summary, file: item.press1_file || DRIVE_LINKS.docx_folder });
                         if (item.press2_title) pressList.push({ title: item.press2_title, date: item.press2_date, summary: item.press2_summary, file: item.press2_file || DRIVE_LINKS.docx_folder });
@@ -758,32 +764,37 @@
             } catch (e) { console.error('project_modals 로드 실패:', e); }
         }
 
+        // 레이아웃 보정 타임라인 로더 (빈 행 스킵)
         async function loadSchedule() {
             try {
                 const res = await fetch(SHEET_URLS.schedule);
                 const text = await res.text();
                 const rows = parseCSV(text);
-                const headers = rows.shift();
+                if (rows.length < 2) return;
 
+                const headers = rows.shift().map(h => h.trim());
                 const container = document.getElementById('schedule-timeline');
                 if (!container) return;
 
                 let html = '';
                 rows.forEach(row => {
-                    const item = {};
-                    headers.forEach((h, i) => item[h] = row[i]);
+                    // 완전히 비어있는 데이터행 제외
+                    if (row.length === 0 || !row[0]) return;
 
-                    if (item.month) {
+                    const item = {};
+                    headers.forEach((h, i) => item[h] = row[i] ? row[i] : '');
+
+                    if (item.month && item.title) {
                         const isHighlight = item.month.includes('10');
                         const badgeColor = isHighlight ? 'bg-miral-red' : 'bg-miral-green';
                         const monthTextColor = isHighlight ? 'text-miral-red' : 'text-miral-green';
 
                         html += `
-                            <div class="relative pl-6 md:pl-8 group">
-                                <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full ${badgeColor} text-white font-black text-xs flex items-center justify-center shadow-md">
+                            <div class="relative group">
+                                <div class="absolute -left-[17px] sm:-left-[21px] top-0 w-8 h-8 rounded-full ${badgeColor} text-white font-black text-xs flex items-center justify-center shadow-md z-10">
                                     ${item.month}
                                 </div>
-                                <div class="hidden md:block absolute -left-28 top-1 text-right w-20 font-black ${monthTextColor} text-lg">
+                                <div class="hidden md:block absolute -left-24 top-1 text-right w-16 font-black ${monthTextColor} text-lg">
                                     ${item.month_en || ''}
                                 </div>
                                 
@@ -792,7 +803,7 @@
                                         ${item.tag1 ? `<span class="bg-emerald-50 text-miral-green border border-emerald-200 text-[11px] font-bold px-2.5 py-0.5 rounded-full">${item.tag1}</span>` : ''}
                                         ${item.tag2 ? `<span class="bg-emerald-50 text-miral-green border border-emerald-200 text-[11px] font-bold px-2.5 py-0.5 rounded-full">${item.tag2}</span>` : ''}
                                     </div>
-                                    <h3 class="text-base font-bold text-gray-900 mb-2">${item.title || ''}</h3>
+                                    <h3 class="text-base font-bold text-gray-900 mb-2">${item.title}</h3>
                                     <p class="text-xs text-gray-600 leading-relaxed mb-3">${item.description || ''}</p>
                                     ${item.point ? `
                                         <div class="bg-gray-50 p-3 rounded-lg border border-gray-100 text-[11px] text-gray-500">
@@ -861,7 +872,6 @@
         }
 
         window.addEventListener('DOMContentLoaded', () => {
-            // 자료실 드라이브 링크 교정
             const zipBtn = document.getElementById('drive-zip-link');
             if (zipBtn) zipBtn.href = DRIVE_LINKS.logo_zip;
 
