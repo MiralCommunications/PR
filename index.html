@@ -39,12 +39,13 @@
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <div class="flex items-center font-bold text-2xl tracking-tight text-gray-900">
+                <a href="#" class="flex items-center font-bold text-2xl tracking-tight text-gray-900">
                     <span class="text-miral-green">밀알복지재단</span>
                     <span class="ml-2 text-xs bg-miral-green/10 text-miral-green px-2 py-0.5 rounded font-semibold border border-miral-green/20">PRESS KIT</span>
-                </div>
+                </a>
             </div>
             
+            <!-- PC Navigation -->
             <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-gray-700">
                 <a href="#about" class="hover:text-miral-green transition-colors">재단소개</a>
                 <a href="#leadership" class="hover:text-miral-green transition-colors">대표자소개</a>
@@ -59,7 +60,23 @@
                 <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-miral-red rounded-lg shadow-sm hover:bg-red-700 transition-colors">
                     <i class="fa-solid fa-paper-plane mr-2"></i> 취재 문의
                 </a>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2 text-gray-700 hover:text-miral-green focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
             </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3 text-sm font-medium">
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-gray-800 hover:text-miral-green border-b border-gray-100">재단소개</a>
+            <a href="#leadership" onclick="toggleMobileMenu()" class="block py-2 text-gray-800 hover:text-miral-green border-b border-gray-100">대표자소개</a>
+            <a href="#history" onclick="toggleMobileMenu()" class="block py-2 text-gray-800 hover:text-miral-green border-b border-gray-100">연혁</a>
+            <a href="#stats" onclick="toggleMobileMenu()" class="block py-2 text-gray-800 hover:text-miral-green border-b border-gray-100">주요지표</a>
+            <a href="#projects" onclick="toggleMobileMenu()" class="block py-2 text-gray-800 hover:text-miral-green border-b border-gray-100">핵심사업</a>
+            <a href="#schedule" onclick="toggleMobileMenu()" class="block py-2 text-gray-800 hover:text-miral-green border-b border-gray-100">2026 취재일정</a>
+            <a href="#media" onclick="toggleMobileMenu()" class="block py-2 text-gray-800 hover:text-miral-green border-b border-gray-100">보도자료 & 자료실</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2.5 text-center font-bold text-white bg-miral-red rounded-lg shadow-sm">취재 문의하기</a>
         </div>
     </header>
 
@@ -94,7 +111,7 @@
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">재단 소개</h2>
                 <p class="text-gray-600 leading-relaxed">
-                    밀알복지재단은 1993년 설립된 장애인 복지 전문 기관으로, 장애인의 완전한 사회통합을 목표로 다양한 복지사업을 운영하고 있습니다. 지역사회와 협력하는 생애주기별 국내전문복지사업과 지속 가능한 국제개발협력을 수행합니다.
+                    밀알복지재단은 1993년 설립된 장애인 복지 전문 기관으로, 장애인의 완전한 사회통합을 목표로 다양한 복지사업을 운영하고 있습니다. 지역사회와 협력하는 생애주기별 국내전문복지사업과 지속 가능한 국제개발협력을 수행합니다[cite: 1, 2].
                 </p>
             </div>
 
@@ -105,7 +122,7 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">MISSION</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        기독교 정신을 바탕으로 소외된 이웃과 더불어 살아가는 완전한 사회통합을 이룬다.
+                        기독교 정신을 바탕으로 소외된 이웃과 더불어 살아가는 완전한 사회통합을 이룬다[cite: 1, 2].
                     </p>
                 </div>
                 <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100">
@@ -114,14 +131,14 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">VISION (Glocal 모델 구현)</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Global + Local의 합성어로, 생애주기별 맞춤형 지원, 자립복지, 장애통합을 실현하는 글로벌 복지 모델을 구축합니다.
+                        Global + Local의 합성어로, 생애주기별 맞춤형 지원, 자립복지, 장애통합을 실현하는 글로벌 복지 모델을 구축합니다[cite: 1, 2].
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Leadership Section -->
+    <!-- Leadership Section (구글 드라이브 프로필 이미지 적용) -->
     <section id="leadership" class="py-20 bg-miral-gray border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -130,36 +147,34 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- 홍정길 이사장 -->
                 <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm flex flex-col sm:flex-row gap-6 items-start">
-                    <div class="w-24 h-32 bg-gray-200 rounded-xl shrink-0 overflow-hidden flex items-center justify-center text-gray-400">
-                        <i class="fa-solid fa-user text-4xl"></i>
-                    </div>
+                    <img src="https://lh3.googleusercontent.com/d/10ElYbahjEh1_dqmuLPoqcNy21KB3rpKM" alt="홍정길 이사장" class="w-28 h-36 object-cover rounded-xl shrink-0 shadow-sm border border-gray-100">
                     <div>
                         <span class="text-xs font-bold text-miral-green">사회복지법인 밀알복지재단 이사장</span>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">홍정길 이사장</h3>
                         <ul class="text-xs text-gray-600 space-y-2 border-t border-gray-100 pt-4">
-                            <li>• 1970~1972 한국대학생선교회(C.C.C) 총무</li>
-                            <li>• 1975~1996 남서울교회 담임목사</li>
-                            <li>• 2004~현재 사회복지법인 밀알복지재단 이사장</li>
-                            <li>• 2011~2022 학교법인 신동아학원 이사장</li>
-                            <li>• 2012~현재 남서울은혜교회 원로목사</li>
+                            <li>• 1970~1972 한국대학생선교회(C.C.C) 총무[cite: 1, 2]</li>
+                            <li>• 1975~1996 남서울교회 담임목사[cite: 1, 2]</li>
+                            <li>• 2004~현재 사회복지법인 밀알복지재단 이사장[cite: 1, 2]</li>
+                            <li>• 2011~2022 학교법인 신동아학원 이사장[cite: 1, 2]</li>
+                            <li>• 2012~현재 남서울은혜교회 원로목사[cite: 1, 2]</li>
                         </ul>
                     </div>
                 </div>
 
+                <!-- 정형석 상임대표 -->
                 <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm flex flex-col sm:flex-row gap-6 items-start">
-                    <div class="w-24 h-32 bg-gray-200 rounded-xl shrink-0 overflow-hidden flex items-center justify-center text-gray-400">
-                        <i class="fa-solid fa-user text-4xl"></i>
-                    </div>
+                    <img src="https://lh3.googleusercontent.com/d/1cbdilbxszzv0sAoCn3HESdlB4p0w30Fm" alt="정형석 상임대표" class="w-28 h-36 object-cover rounded-xl shrink-0 shadow-sm border border-gray-100">
                     <div>
                         <span class="text-xs font-bold text-miral-green">상임대표 / 기빙플러스 대표이사</span>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">정형석 상임대표</h3>
                         <ul class="text-xs text-gray-600 space-y-2 border-t border-gray-100 pt-4">
-                            <li>• 1983~1997 한국밀알선교단 총무 및 단장</li>
-                            <li>• 1993~현재 사회복지법인 밀알복지재단 상임대표</li>
-                            <li>• 2015~현재 한국자선단체협의회 이사</li>
-                            <li>• 2017~현재 국제개발협력민간협의회 KCOC 이사</li>
-                            <li>• 2022~현재 재단법인 기빙플러스 대표이사</li>
+                            <li>• 1983~1997 한국밀알선교단 총무 및 단장[cite: 1, 2]</li>
+                            <li>• 1993~현재 사회복지법인 밀알복지재단 상임대표[cite: 1, 2]</li>
+                            <li>• 2015~현재 한국자선단체협의회 이사[cite: 1, 2]</li>
+                            <li>• 2017~현재 국제개발협력민간협의회 KCOC 이사[cite: 1, 2]</li>
+                            <li>• 2022~현재 재단법인 기빙플러스 대표이사[cite: 1, 2]</li>
                         </ul>
                     </div>
                 </div>
@@ -179,39 +194,39 @@
                 <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
                     <div class="inline-block bg-miral-green text-white font-bold px-3 py-1 rounded-md text-sm mb-4">1993 ~ 2010</div>
                     <ul class="text-xs text-gray-600 space-y-2.5">
-                        <li><strong>1993:</strong> 장애인 복지사업 시작</li>
-                        <li><strong>1996:</strong> 장애인 공동 생활가정 운영</li>
-                        <li><strong>1997:</strong> 밀알학교 개교</li>
-                        <li><strong>1998:</strong> 통합 보육시설 및 종합 복지관 사업 시작</li>
-                        <li><strong>1999:</strong> 장애인 종합 복지관 운영</li>
-                        <li><strong>2000:</strong> 노인 종합 복지관 운영</li>
-                        <li><strong>2003:</strong> 장애인 주간보호센터 운영</li>
-                        <li><strong>2008:</strong> 직업재활센터 운영 및 해외사업 시작</li>
+                        <li><strong>1993:</strong> 장애인 복지사업 시작[cite: 1, 2]</li>
+                        <li><strong>1996:</strong> 장애인 공동 생활가정 운영[cite: 1, 2]</li>
+                        <li><strong>1997:</strong> 밀알학교 개교[cite: 1, 2]</li>
+                        <li><strong>1998:</strong> 통합 보육시설 및 종합 복지관 사업 시작[cite: 1, 2]</li>
+                        <li><strong>1999:</strong> 장애인 종합 복지관 운영[cite: 1, 2]</li>
+                        <li><strong>2000:</strong> 노인 종합 복지관 운영[cite: 1, 2]</li>
+                        <li><strong>2003:</strong> 장애인 주간보호센터 운영[cite: 1, 2]</li>
+                        <li><strong>2008:</strong> 직업재활센터 운영 및 해외사업 시작[cite: 1, 2]</li>
                     </ul>
                 </div>
 
                 <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
                     <div class="inline-block bg-miral-green text-white font-bold px-3 py-1 rounded-md text-sm mb-4">2011 ~ 2018</div>
                     <ul class="text-xs text-gray-600 space-y-2.5">
-                        <li><strong>2011:</strong> 굿윌스토어 개점 & 해외긴급구호 실시</li>
-                        <li><strong>2012:</strong> 아프리카 권역본부 개설</li>
-                        <li><strong>2013:</strong> 말라위·케냐지부 NGO 등록 및 현지법인 설립</li>
-                        <li><strong>2014:</strong> 제6회 삼일투명경영대상 대상 수상</li>
-                        <li><strong>2015:</strong> UN 경제사회이사회 특별협의적지위 획득</li>
-                        <li><strong>2017:</strong> 기빙플러스 개점</li>
-                        <li><strong>2018:</strong> 투명성 평가 최고 등급 크라운인증 획득</li>
+                        <li><strong>2011:</strong> 굿윌스토어 개점 & 해외긴급구호 실시[cite: 1, 2]</li>
+                        <li><strong>2012:</strong> 아프리카 권역본부 개설[cite: 1, 2]</li>
+                        <li><strong>2013:</strong> 말라위·케냐지부 NGO 등록 및 현지법인 설립[cite: 1, 2]</li>
+                        <li><strong>2014:</strong> 제6회 삼일투명경영대상 대상 수상[cite: 1, 2]</li>
+                        <li><strong>2015:</strong> UN 경제사회이사회 특별협의적지위 획득[cite: 1, 2]</li>
+                        <li><strong>2017:</strong> 기빙플러스 개점[cite: 1, 2]</li>
+                        <li><strong>2018:</strong> 투명성 평가 최고 등급 크라운인증 획득[cite: 1, 2]</li>
                     </ul>
                 </div>
 
                 <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
                     <div class="inline-block bg-miral-green text-white font-bold px-3 py-1 rounded-md text-sm mb-4">2019 ~ 2025</div>
                     <ul class="text-xs text-gray-600 space-y-2.5">
-                        <li><strong>2019:</strong> 서울특별시 인증법인 선정</li>
-                        <li><strong>2020:</strong> 장애인먼저실천상 대상 수상</li>
-                        <li><strong>2022:</strong> 사회적경제 유공자 정부포상 대통령상 수상</li>
-                        <li><strong>2023:</strong> 설립 30주년 & 헬렌켈러 학습지원센터 개소</li>
-                        <li><strong>2024:</strong> 헬렌켈러센터 보건복지부 시청각장애인 지원 전담기관 지정</li>
-                        <li><strong>2025:</strong> 통합 멤버십 앱 '밀알멤버스' 론칭</li>
+                        <li><strong>2019:</strong> 서울특별시 인증법인 선정[cite: 1, 2]</li>
+                        <li><strong>2020:</strong> 장애인먼저실천상 대상 수상[cite: 1, 2]</li>
+                        <li><strong>2022:</strong> 사회적경제 유공자 정부포상 대통령상 수상[cite: 1, 2]</li>
+                        <li><strong>2023:</strong> 설립 30주년 & 헬렌켈러 학습지원센터 개소[cite: 1, 2]</li>
+                        <li><strong>2024:</strong> 헬렌켈러센터 보건복지부 시청각장애인 지원 전담기관 지정[cite: 1, 2]</li>
+                        <li><strong>2025:</strong> 통합 멤버십 앱 '밀알멤버스' 론칭[cite: 1, 2]</li>
                     </ul>
                 </div>
             </div>
@@ -224,7 +239,7 @@
             <div class="text-center mb-16">
                 <span class="text-miral-green font-bold text-sm tracking-widest uppercase">Transparency & Impact</span>
                 <h2 class="text-3xl font-bold text-gray-900 mt-2">숫자로 보는 밀알복지재단</h2>
-                <p class="text-xs text-gray-500 mt-1">*2024년 밀알복지재단 연차보고서 기준</p>
+                <p class="text-xs text-gray-500 mt-1">*2024년 밀알복지재단 연차보고서 기준[cite: 1, 2]</p>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -232,37 +247,37 @@
                     <div class="absolute top-0 left-0 right-0 h-1 bg-miral-green"></div>
                     <span class="inline-block bg-emerald-50 text-miral-green text-xs font-bold px-2.5 py-1 rounded-full mb-3">투명성 최우수</span>
                     <div id="stat-eval" class="text-3xl font-black text-gray-900 mb-1">7년 연속 만점</div>
-                    <div class="text-sm font-medium text-gray-500">한국가이드스타 평가</div>
+                    <div class="text-sm font-medium text-gray-500">한국가이드스타 평가[cite: 1, 2]</div>
                 </div>
 
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center relative overflow-hidden">
                     <div class="absolute top-0 left-0 right-0 h-1 bg-miral-green"></div>
                     <span class="inline-block bg-emerald-50 text-miral-green text-xs font-bold px-2.5 py-1 rounded-full mb-3">연간 기부 규모</span>
                     <div id="stat-donation" class="text-3xl font-black text-miral-green mb-1">1,516억 원</div>
-                    <div class="text-sm font-medium text-gray-500">현금 및 물품 기부액</div>
+                    <div class="text-sm font-medium text-gray-500">현금 및 물품 기부액[cite: 1, 2]</div>
                 </div>
 
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center relative overflow-hidden">
                     <div class="absolute top-0 left-0 right-0 h-1 bg-miral-green"></div>
                     <span class="inline-block bg-emerald-50 text-miral-green text-xs font-bold px-2.5 py-1 rounded-full mb-3">장애인 일자리</span>
                     <div id="stat-store" class="text-3xl font-black text-gray-900 mb-1">46개 매장</div>
-                    <div class="text-sm font-medium text-gray-500">굿윌스토어 (장애인 근로자 480명)</div>
+                    <div class="text-sm font-medium text-gray-500">굿윌스토어 (장애인 근로자 480명)[cite: 1, 2]</div>
                 </div>
 
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center relative overflow-hidden">
                     <div class="absolute top-0 left-0 right-0 h-1 bg-miral-green"></div>
                     <span class="inline-block bg-emerald-50 text-miral-green text-xs font-bold px-2.5 py-1 rounded-full mb-3">복지 수혜 인원</span>
                     <div id="stat-beneficiaries" class="text-3xl font-black text-gray-900 mb-1">2,853,351명</div>
-                    <div class="text-sm font-medium text-gray-500">연간 지원 수혜자 수</div>
+                    <div class="text-sm font-medium text-gray-500">연간 지원 수혜자 수[cite: 1, 2]</div>
                 </div>
             </div>
 
             <div class="mt-8 bg-white p-6 rounded-2xl border border-gray-200 grid sm:grid-cols-2 text-center divide-y sm:divide-y-0 sm:divide-x divide-gray-100 text-xs text-gray-600">
                 <div class="py-2">
-                    <span class="font-bold text-gray-900">국내 네트워크:</span> <span id="stat-domestic">9개 지부 / 62개 시설 / 87개 사업장</span>
+                    <span class="font-bold text-gray-900">국내 네트워크:</span> <span id="stat-domestic">9개 지부 / 62개 시설 / 87개 사업장</span>[cite: 1, 2]
                 </div>
                 <div class="py-2">
-                    <span class="font-bold text-gray-900">해외 네트워크:</span> <span id="stat-global">11개국 / 14개 사업장</span>
+                    <span class="font-bold text-gray-900">해외 네트워크:</span> <span id="stat-global">11개국 / 14개 사업장</span>[cite: 1, 2]
                 </div>
             </div>
         </div>
@@ -291,9 +306,9 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <p class="text-sm font-bold text-miral-green mb-2">"자선이 아닌 기회를!"</p>
+                        <p class="text-sm font-bold text-miral-green mb-2">"자선이 아닌 기회를!"[cite: 1, 2]</p>
                         <p class="text-gray-600 text-xs leading-relaxed mb-4">
-                            기증품 판매 수익으로 장애인을 고용하는 직업재활시설. (전국 46개 매장, 장애인 480명 고용)
+                            기증품 판매 수익으로 장애인을 고용하는 직업재활시설. (전국 46개 매장, 장애인 480명 고용)[cite: 1, 2]
                         </p>
                         <span class="text-xs font-bold text-miral-green inline-flex items-center group-hover:underline">
                             상세보기 & 보도자료 다운로드 <i class="fa-solid fa-arrow-right ml-1"></i>
@@ -311,9 +326,9 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <p class="text-sm font-bold text-miral-green mb-2">시청각장애인 지원 전담기관</p>
+                        <p class="text-sm font-bold text-miral-green mb-2">시청각장애인 지원 전담기관[cite: 1, 2]</p>
                         <p class="text-gray-600 text-xs leading-relaxed mb-4">
-                            시각·청각 중복장애인을 위한 촉감교육, 점자/촉수화 교육 및 자립 전담 지원
+                            시각·청각 중복장애인을 위한 촉감교육, 점자/촉수화 교육 및 자립 전담 지원[cite: 1, 2]
                         </p>
                         <span class="text-xs font-bold text-miral-green inline-flex items-center group-hover:underline">
                             상세보기 & 보도자료 다운로드 <i class="fa-solid fa-arrow-right ml-1"></i>
@@ -330,9 +345,9 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <p class="text-sm font-bold text-miral-green mb-2">발달장애인 미술·음악 전문 예술단</p>
+                        <p class="text-sm font-bold text-miral-green mb-2">발달장애인 미술·음악 전문 예술단[cite: 1, 2]</p>
                         <p class="text-gray-600 text-xs leading-relaxed mb-4">
-                            성인 발달장애 작가(아르떼) 및 연주자(앙상블)를 정규직 예술인으로 고용하는 문화예술 사업
+                            성인 발달장애 작가(아르떼) 및 연주자(앙상블)를 정규직 예술인으로 고용하는 문화예술 사업[cite: 1, 2]
                         </p>
                         <span class="text-xs font-bold text-miral-green inline-flex items-center group-hover:underline">
                             상세보기 & 보도자료 다운로드 <i class="fa-solid fa-arrow-right ml-1"></i>
@@ -349,36 +364,36 @@
                     </h3>
                     <ul class="text-xs text-gray-600 space-y-3">
                         <li class="bg-white p-3 rounded-lg border border-gray-100">
-                            <strong>장애인복지사업:</strong> 41개 시설 57개 사업장에서 의료, 교육, 직업, 사회재활 및 인식개선 전개
+                            <strong>장애인복지사업:</strong> 41개 시설 57개 사업장에서 의료, 교육, 직업, 사회재활 및 인식개선 전개[cite: 1, 2]
                         </li>
                         <li class="bg-white p-3 rounded-lg border border-gray-100">
-                            <strong>노인복지사업:</strong> 전국 5개 시설에서 취약계층 지원, 장기요양, 여가·건강지원 수행
+                            <strong>노인복지사업:</strong> 전국 5개 시설에서 취약계층 지원, 장기요양, 여가·건강지원 수행[cite: 1, 2]
                         </li>
                         <li class="bg-white p-3 rounded-lg border border-gray-100">
-                            <strong>지역사회복지사업:</strong> 맞춤형 지역복지 및 에너지 나눔(태양광 하이브리드 가로등 설치 등)
+                            <strong>지역사회복지사업:</strong> 맞춤형 지역복지 및 에너지 나눔(태양광 하이브리드 가로등 설치 등)[cite: 1, 2]
                         </li>
                         <li class="bg-white p-3 rounded-lg border border-gray-100">
-                            <strong>아동복지 & 인재육성:</strong> 통합보육 및 장애아동 미술(봄), 첼로(날개), 현악(알레그로), 체육(점프) 지원
+                            <strong>아동복지 & 인재육성:</strong> 통합보육 및 장애아동 미술(봄), 첼로(날개), 현악(알레그로), 체육(점프) 지원[cite: 1, 2]
                         </li>
                     </ul>
                 </div>
 
                 <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                     <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                        <i class="fa-solid fa-globe text-miral-green mr-2"></i> 해외 개발 협력 (UN ECOSOC 특별협의지위)
+                        <i class="fa-solid fa-globe text-miral-green mr-2"></i> 해외 개발 협력 (UN ECOSOC 특별협의지위)[cite: 1, 2]
                     </h3>
                     <ul class="text-xs text-gray-600 space-y-3">
                         <li class="bg-white p-3 rounded-lg border border-gray-100">
-                            <strong>지역개발사업:</strong> 1:1 아동결연을 통한 교육, 보호, 보건, 소득증대 통합 지원
+                            <strong>지역개발사업:</strong> 1:1 아동결연을 통한 교육, 보호, 보건, 소득증대 통합 지원[cite: 1, 2]
                         </li>
                         <li class="bg-white p-3 rounded-lg border border-gray-100">
-                            <strong>교육보호사업:</strong> 기초·청소년 교육, 특수교육 및 장애인식개선 교육 인프라 지원
+                            <strong>교육보호사업:</strong> 기초·청소년 교육, 특수교육 및 장애인식개선 교육 인프라 지원[cite: 1, 2]
                         </li>
                         <li class="bg-white p-3 rounded-lg border border-gray-100">
-                            <strong>보건 & 소득증대:</strong> 보건영양, 식수위생, 직업활동 및 사회적기업 설립 지원
+                            <strong>보건 & 소득증대:</strong> 보건영양, 식수위생, 직업활동 및 사회적기업 설립 지원[cite: 1, 2]
                         </li>
                         <li class="bg-white p-3 rounded-lg border border-gray-100">
-                            <strong>인도적 지원:</strong> 긴급 재난 및 만성 재난 피해주민 구호 및 지역사회 대응 역량 강화
+                            <strong>인도적 지원:</strong> 긴급 재난 및 만성 재난 피해주민 구호 및 지역사회 대응 역량 강화[cite: 1, 2]
                         </li>
                     </ul>
                 </div>
@@ -397,132 +412,8 @@
                 <p class="text-gray-500 text-sm mt-2 md:mt-0">기자님의 사전 취재 및 기획 기사 준비를 위한 월별 주요 이슈 타임라인입니다.</p>
             </div>
 
-            <div class="relative border-l-2 border-miral-green/30 ml-4 md:ml-32 space-y-8">
-                <!-- 8월 -->
-                <div class="relative pl-6 md:pl-8 group">
-                    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-miral-green text-white font-black text-xs flex items-center justify-center shadow-md">
-                        8월
-                    </div>
-                    <div class="hidden md:block absolute -left-28 top-1 text-right w-20 font-black text-miral-green text-lg">
-                        AUG
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:border-miral-green transition-colors">
-                        <div class="flex flex-wrap items-center gap-2 mb-3">
-                            <span class="bg-emerald-50 text-miral-green border border-emerald-200 text-[11px] font-bold px-2.5 py-0.5 rounded-full">#시청각장애아동</span>
-                            <span class="bg-emerald-50 text-miral-green border border-emerald-200 text-[11px] font-bold px-2.5 py-0.5 rounded-full">#교육매뉴얼</span>
-                        </div>
-                        <h3 class="text-base font-bold text-gray-900 mb-2">시청각장애아동 교육 매뉴얼 발간</h3>
-                        <p class="text-xs text-gray-600 leading-relaxed mb-3">
-                            국내 최초로 시각과 청각 장애를 동시에 가진 아동을 위한 맞춤형 교육 매뉴얼을 발간하고, 전국 관련 기관 및 가정에 보급을 시작합니다.
-                        </p>
-                        <div class="bg-gray-50 p-3 rounded-lg border border-gray-100 text-[11px] text-gray-500">
-                            <strong class="text-miral-green">💡 취재 포인트:</strong> 국내 감각장애 아동 교육 인프라 현황 및 촉감 교구 교육 현장 취재 가능
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 9월 -->
-                <div class="relative pl-6 md:pl-8 group">
-                    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-miral-green text-white font-black text-xs flex items-center justify-center shadow-md">
-                        9월
-                    </div>
-                    <div class="hidden md:block absolute -left-28 top-1 text-right w-20 font-black text-miral-green text-lg">
-                        SEP
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:border-miral-green transition-colors">
-                        <div class="flex flex-wrap items-center gap-2 mb-3">
-                            <span class="bg-emerald-50 text-miral-green border border-emerald-200 text-[11px] font-bold px-2.5 py-0.5 rounded-full">#전국장애인체전</span>
-                            <span class="bg-emerald-50 text-miral-green border border-emerald-200 text-[11px] font-bold px-2.5 py-0.5 rounded-full">#점프(JUMP)</span>
-                        </div>
-                        <h3 class="text-base font-bold text-gray-900 mb-2">전국장애인체전 참가 (점프 선수단 출전)</h3>
-                        <p class="text-xs text-gray-600 leading-relaxed mb-3">
-                            저소득 장애청소년 선수 육성사업인 '점프(JUMP)'를 통해 기량을 다진 저소득 장애 청소년 선수들이 전국장애인체전에 참가합니다.
-                        </p>
-                        <div class="bg-gray-50 p-3 rounded-lg border border-gray-100 text-[11px] text-gray-500">
-                            <strong class="text-miral-green">💡 취재 포인트:</strong> 장애청소년 스포츠선수 자립 스토리 및 대회 현장 밀착 인터뷰
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 10월 -->
-                <div class="relative pl-6 md:pl-8 group">
-                    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-miral-red text-white font-black text-xs flex items-center justify-center shadow-md">
-                        10월
-                    </div>
-                    <div class="hidden md:block absolute -left-28 top-1 text-right w-20 font-black text-miral-red text-lg">
-                        OCT
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:border-miral-green transition-colors">
-                        <div class="flex flex-wrap items-center gap-2 mb-3">
-                            <span class="bg-red-50 text-miral-red border border-red-200 text-[11px] font-bold px-2.5 py-0.5 rounded-full">★ 하반기 주요 이슈</span>
-                            <span class="bg-emerald-50 text-miral-green border border-emerald-200 text-[11px] font-bold px-2.5 py-0.5 rounded-full">#시청각장애전국대회</span>
-                            <span class="bg-emerald-50 text-miral-green border border-emerald-200 text-[11px] font-bold px-2.5 py-0.5 rounded-full">#스토리텔링공모전</span>
-                        </div>
-                        <h3 class="text-base font-bold text-gray-900 mb-3">10월 주요 진행 일정 (4개 사업)</h3>
-                        <ul class="text-xs text-gray-600 space-y-2 mb-4">
-                            <li class="flex items-start"><i class="fa-solid fa-check text-miral-green mr-2 mt-0.5"></i> <strong>시청각장애인 전국대회:</strong> 한국 최초 개최, 전국 시청각장애인들이 모여 소통하는 교류의 장</li>
-                            <li class="flex items-start"><i class="fa-solid fa-check text-miral-green mr-2 mt-0.5"></i> <strong>제12회 스토리텔링 공모전 시상식:</strong> 일상 속 장애인 이야기로 공감대를 확산하는 시상식</li>
-                            <li class="flex items-start"><i class="fa-solid fa-check text-miral-green mr-2 mt-0.5"></i> <strong>'봄(Seeing&Spring)' 프로젝트 정기 전시회:</strong> 발달장애 청소년 미술작가들의 정기 전시</li>
-                            <li class="flex items-start"><i class="fa-solid fa-check text-miral-green mr-2 mt-0.5"></i> <strong>장애아동 의료비 지원사업 15주년 포럼:</strong> 15년간의 성과 보고 및 복지향상 포럼</li>
-                        </ul>
-                        <div class="bg-gray-50 p-3 rounded-lg border border-gray-100 text-[11px] text-gray-500">
-                            <strong class="text-miral-green">💡 취재 포인트:</strong> 한국 최초 시청각장애인 전국대회 현장 스케치 및 공모전 수상자 스토리
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 11월 -->
-                <div class="relative pl-6 md:pl-8 group">
-                    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-miral-green text-white font-black text-xs flex items-center justify-center shadow-md">
-                        11월
-                    </div>
-                    <div class="hidden md:block absolute -left-28 top-1 text-right w-20 font-black text-miral-green text-lg">
-                        NOV
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:border-miral-green transition-colors">
-                        <div class="flex flex-wrap items-center gap-2 mb-3">
-                            <span class="bg-emerald-50 text-miral-green border border-emerald-200 text-[11px] font-bold px-2.5 py-0.5 rounded-full">#밀알현악앙상블</span>
-                            <span class="bg-emerald-50 text-miral-green border border-emerald-200 text-[11px] font-bold px-2.5 py-0.5 rounded-full">#알레그로</span>
-                        </div>
-                        <h3 class="text-base font-bold text-gray-900 mb-2">'밀알현악앙상블 알레그로' 정기연주회</h3>
-                        <p class="text-xs text-gray-600 leading-relaxed mb-3">
-                            발달장애 아동·청소년으로 구성된 현악 오케스트라 '알레그로'의 정기연주회가 개최됩니다. 전문 음악인으로 성장해 가는 단원들의 하모니를 선보입니다.
-                        </p>
-                        <div class="bg-gray-50 p-3 rounded-lg border border-gray-100 text-[11px] text-gray-500">
-                            <strong class="text-miral-green">💡 취재 포인트:</strong> 발달장애 청소년 음악교육 성과 및 공연 현장 관람/단원 인터뷰
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 12월 -->
-                <div class="relative pl-6 md:pl-8 group">
-                    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-miral-green text-white font-black text-xs flex items-center justify-center shadow-md">
-                        12월
-                    </div>
-                    <div class="hidden md:block absolute -left-28 top-1 text-right w-20 font-black text-miral-green text-lg">
-                        DEC
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:border-miral-green transition-colors">
-                        <div class="flex flex-wrap items-center gap-2 mb-3">
-                            <span class="bg-emerald-50 text-miral-green border border-emerald-200 text-[11px] font-bold px-2.5 py-0.5 rounded-full">#첼로앙상블날개</span>
-                            <span class="bg-emerald-50 text-miral-green border border-emerald-200 text-[11px] font-bold px-2.5 py-0.5 rounded-full">#세계장애인의날</span>
-                        </div>
-                        <h3 class="text-base font-bold text-gray-900 mb-3">12월 주요 진행 일정 (2개 사업)</h3>
-                        <ul class="text-xs text-gray-600 space-y-2 mb-4">
-                            <li class="flex items-start"><i class="fa-solid fa-check text-miral-green mr-2 mt-0.5"></i> <strong>'밀알첼로앙상블 날개' 정기연주회:</strong> 국내 최초 발달장애 청소년 첼로 오케스트라 정기 공연</li>
-                            <li class="flex items-start"><i class="fa-solid fa-check text-miral-green mr-2 mt-0.5"></i> <strong>'세계 장애인의 날' 기념 캠페인:</strong> 장애인 권리 향상 및 인식개선을 위한 연말 나눔 캠페인</li>
-                        </ul>
-                        <div class="bg-gray-50 p-3 rounded-lg border border-gray-100 text-[11px] text-gray-500">
-                            <strong class="text-miral-green">💡 취재 포인트:</strong> 창단 14년 차를 맞이한 '날개' 앙상블의 무대 연주 및 연말 장애인식개선 보도
-                        </div>
-                    </div>
-                </div>
-
+            <div id="schedule-timeline" class="relative border-l-2 border-miral-green/30 ml-4 md:ml-32 space-y-8">
+                <!-- 구글 시트 schedule 탭에서 동적 연동됨 -->
             </div>
         </div>
     </section>
@@ -536,21 +427,24 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                <!-- 01_공식로고 -->
                 <div class="p-6 bg-gray-50 rounded-2xl border border-gray-200 flex flex-col justify-between hover:border-miral-green transition-colors">
                     <div>
                         <div class="w-10 h-10 bg-emerald-100 text-miral-green rounded-xl flex items-center justify-center text-lg font-bold mb-4">
                             <i class="fa-solid fa-image"></i>
                         </div>
                         <h4 class="font-bold text-gray-900 text-base mb-1">공식 CI / 로고 폴더</h4>
-                        <p class="text-xs text-gray-500 mb-6">AI, PNG 고화질 로고 자산 포함</p>
+                        <p class="text-xs text-gray-500 mb-6">AI, PNG 고화질 로고 자산 및 ZIP</p>
                     </div>
-                    <a id="https://drive.google.com/file/d/1_oLv-YAz81lIKPJCvaLCXNWtwqyU_FSz/view?usp=drive_link" href="#" target="_blank" class="w-full py-2.5 bg-white border border-gray-300 rounded-lg text-xs font-bold text-gray-700 hover:bg-miral-green hover:text-white hover:border-miral-green transition-colors flex items-center justify-center">
-                        <i class="fa-solid fa-folder-open mr-1.5"></i> 01_공식로고 열기
-                    </a>
+                    <div class="space-y-2">
+                        <a id="drive-logo-link" href="#" target="_blank" class="w-full py-2 bg-white border border-gray-300 rounded-lg text-xs font-bold text-gray-700 hover:bg-miral-green hover:text-white hover:border-miral-green transition-colors flex items-center justify-center">
+                            <i class="fa-solid fa-folder-open mr-1.5"></i> 01_공식로고 폴더
+                        </a>
+                        <a id="drive-zip-link" href="#" target="_blank" class="w-full py-2 bg-miral-green/10 text-miral-green border border-miral-green/30 rounded-lg text-xs font-bold hover:bg-miral-green hover:text-white transition-colors flex items-center justify-center">
+                            <i class="fa-solid fa-file-zipper mr-1.5"></i> 로고팩 ZIP 다운로드
+                        </a>
+                    </div>
                 </div>
 
-                <!-- 02_대표이미지 -->
                 <div class="p-6 bg-gray-50 rounded-2xl border border-gray-200 flex flex-col justify-between hover:border-miral-green transition-colors">
                     <div>
                         <div class="w-10 h-10 bg-emerald-100 text-miral-green rounded-xl flex items-center justify-center text-lg font-bold mb-4">
@@ -564,7 +458,6 @@
                     </a>
                 </div>
 
-                <!-- 03_보도자료DOCX -->
                 <div class="p-6 bg-gray-50 rounded-2xl border border-gray-200 flex flex-col justify-between hover:border-miral-green transition-colors">
                     <div>
                         <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-lg font-bold mb-4">
@@ -578,7 +471,6 @@
                     </a>
                 </div>
 
-                <!-- 04_연차보고서PDF -->
                 <div class="p-6 bg-gray-50 rounded-2xl border border-gray-200 flex flex-col justify-between hover:border-miral-green transition-colors">
                     <div>
                         <div class="w-10 h-10 bg-red-100 text-miral-red rounded-xl flex items-center justify-center text-lg font-bold mb-4">
@@ -587,9 +479,14 @@
                         <h4 class="font-bold text-gray-900 text-base mb-1">연차보고서 & 프레스킷</h4>
                         <p class="text-xs text-gray-500 mb-6">2026 프레스킷 및 연차보고서 PDF</p>
                     </div>
-                    <a id="https://drive.google.com/file/d/16kbSUdi5XYgBhS8-R7zi4eTeQITxfsrI/view?usp=drive_link" href="#" target="_blank" class="w-full py-2.5 bg-white border border-gray-300 rounded-lg text-xs font-bold text-gray-700 hover:bg-miral-green hover:text-white hover:border-miral-green transition-colors flex items-center justify-center">
-                        <i class="fa-solid fa-folder-open mr-1.5"></i> 04_연차보고서PDF 열기
-                    </a>
+                    <div class="space-y-2">
+                        <a id="drive-pdf-folder-link" href="#" target="_blank" class="w-full py-2 bg-white border border-gray-300 rounded-lg text-xs font-bold text-gray-700 hover:bg-miral-green hover:text-white hover:border-miral-green transition-colors flex items-center justify-center">
+                            <i class="fa-solid fa-folder-open mr-1.5"></i> 04_연차보고서PDF 폴더
+                        </a>
+                        <a id="drive-pdf-file-link" href="#" target="_blank" class="w-full py-2 bg-miral-red/10 text-miral-red border border-miral-red/30 rounded-lg text-xs font-bold hover:bg-miral-red hover:text-white transition-colors flex items-center justify-center">
+                            <i class="fa-solid fa-file-pdf mr-1.5"></i> 연차보고서 PDF 보기
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -602,33 +499,27 @@
                 <div>
                     <span class="text-miral-green font-bold text-sm tracking-widest uppercase">Press Office</span>
                     <h2 class="text-3xl font-bold mt-2 mb-6">언론홍보 담당자 안내</h2>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        밀알복지재단 커뮤니케이션실은 기자님들의 정확하고 신속한 취재를 지원합니다. 아래 폼을 작성해 주시면 담당자가 빠르게 연락드리겠습니다.
+                    </p>
 
                     <div class="space-y-4">
-                        <div class="p-4 bg-gray-800/60 rounded-xl border border-gray-700/50 flex justify-between items-center">
-                            <div>
-                                <span class="text-xs font-bold text-miral-green">실장</span>
-                                <h4 class="font-bold text-base">이수은 실장</h4>
-                                <p class="text-xs text-gray-400">selee@miral.org | 02-6411-3571 | 010-9090-0619</p>
-                            </div>
-                            <a href="mailto:selee@miral.org" class="text-xs bg-gray-700 hover:bg-miral-green px-3 py-2 rounded font-semibold transition-colors">메일 보내기</a>
+                        <div class="p-4 bg-gray-800/60 rounded-xl border border-gray-700/50">
+                            <span class="text-xs font-bold text-miral-green">실장</span>
+                            <h4 class="font-bold text-base text-white">이수은 실장</h4>
+                            <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-building mr-1"></i> 직통: 02-6411-3571</p>
                         </div>
 
-                        <div class="p-4 bg-gray-800/60 rounded-xl border border-gray-700/50 flex justify-between items-center">
-                            <div>
-                                <span class="text-xs font-bold text-miral-green">팀장</span>
-                                <h4 class="font-bold text-base">오솔길 팀장</h4>
-                                <p class="text-xs text-gray-400">solgil@miral.org | 02-6411-3573 | 010-9869-1515</p>
-                            </div>
-                            <a href="mailto:solgil@miral.org" class="text-xs bg-gray-700 hover:bg-miral-green px-3 py-2 rounded font-semibold transition-colors">메일 보내기</a>
+                        <div class="p-4 bg-gray-800/60 rounded-xl border border-gray-700/50">
+                            <span class="text-xs font-bold text-miral-green">팀장</span>
+                            <h4 class="font-bold text-base text-white">오솔길 팀장</h4>
+                            <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-building mr-1"></i> 직통: 02-6411-3573</p>
                         </div>
 
-                        <div class="p-4 bg-gray-800/60 rounded-xl border border-gray-700/50 flex justify-between items-center">
-                            <div>
-                                <span class="text-xs font-bold text-miral-green">간사</span>
-                                <h4 class="font-bold text-base">노혜진 간사</h4>
-                                <p class="text-xs text-gray-400">hjnho@miral.org | 02-6411-3577 | 010-5583-1705</p>
-                            </div>
-                            <a href="mailto:hjnho@miral.org" class="text-xs bg-gray-700 hover:bg-miral-green px-3 py-2 rounded font-semibold transition-colors">메일 보내기</a>
+                        <div class="p-4 bg-gray-800/60 rounded-xl border border-gray-700/50">
+                            <span class="text-xs font-bold text-miral-green">간사</span>
+                            <h4 class="font-bold text-base text-white">노혜진 간사</h4>
+                            <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-building mr-1"></i> 직통: 02-6411-3577</p>
                         </div>
                     </div>
                 </div>
@@ -677,7 +568,7 @@
     <!-- Footer -->
     <footer class="bg-black text-gray-500 py-8 text-xs border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
-            <p>사회복지법인 밀알복지재단 | 커뮤니케이션실 대표 이메일: pr@miral.org</p>
+            <p>사회복지법인 밀알복지재단 | 커뮤니케이션실 대표 이메일: pr@miral.org[cite: 1, 2]</p>
             <p>© MILAL WELFARE FOUNDATION. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
@@ -717,7 +608,7 @@
             </div>
 
             <div class="p-4 bg-gray-50 border-t border-gray-100 flex justify-between items-center">
-                <span class="text-xs text-gray-500">취재 문의: pr@miral.org</span>
+                <span class="text-xs text-gray-500">취재 문의: pr@miral.org[cite: 1, 2]</span>
                 <a href="#contact" onclick="closeModal()" class="px-4 py-2 bg-miral-red text-white font-bold text-xs rounded-lg hover:bg-red-700 transition-colors">
                     이 사업 취재 요청하기
                 </a>
@@ -725,85 +616,202 @@
         </div>
     </div>
 
-    <!-- Script Engine (에러 검증 완료) -->
+    <!-- Engine Script -->
     <script>
-        // 구글 드라이브 폴더 링크 (필요 시 수정 가능)
-        const DRIVE_LINKS = {
-            logo: "https://drive.google.com",
-            image: "https://drive.google.com",
-            docx: "https://drive.google.com",
-            pdf: "https://drive.google.com"
+        // 1. 구글 시트 탭별 CSV 주소
+        const SHEET_URLS = {
+            main_stats: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSRMRgMOShdisQGmPIOTiQS9jUbfdFmS5BACgkGbK002r2uoXspaX1yYcJERNqAnXnR7x4nGvCz5pMg/pub?gid=482435986&single=true&output=csv',
+            project_modals: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSRMRgMOShdisQGmPIOTiQS9jUbfdFmS5BACgkGbK002r2uoXspaX1yYcJERNqAnXnR7x4nGvCz5pMg/pub?gid=1349697879&single=true&output=csv',
+            schedule: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSRMRgMOShdisQGmPIOTiQS9jUbfdFmS5BACgkGbK002r2uoXspaX1yYcJERNqAnXnR7x4nGvCz5pMg/pub?gid=1377596299&single=true&output=csv'
         };
 
-        document.addEventListener('DOMContentLoaded', () => {
-            if (document.getElementById('drive-logo-link')) document.getElementById('drive-logo-link').href = DRIVE_LINKS.logo;
-            if (document.getElementById('drive-img-link')) document.getElementById('drive-img-link').href = DRIVE_LINKS.image;
-            if (document.getElementById('drive-docx-link')) document.getElementById('drive-docx-link').href = DRIVE_LINKS.docx;
-            if (document.getElementById('drive-pdf-link')) document.getElementById('drive-pdf-link').href = DRIVE_LINKS.pdf;
-        });
+        // 2. 구글 드라이브 공유 링크
+        const DRIVE_LINKS = {
+            logo_folder: "https://drive.google.com/drive/folders/1Oe_naa995bI8GkJGpdO2GYU3Fi_NMfhk?usp=drive_link",
+            img_folder: "https://drive.google.com/drive/folders/1Kmb6XZnmAmRPShfT_1thS2WeKdG88Lsx?usp=drive_link",
+            docx_folder: "https://drive.google.com/drive/folders/1PtEvHyB9XUkp-8h-8LBFpN0I9cDnBvns?usp=drive_link",
+            pdf_folder: "https://drive.google.com/drive/folders/1SO_wb23oG8CbTEBC8thQ3hqElE1u-YkU?usp=drive_link",
+            logo_zip: "https://drive.google.com/file/d/1_oLv-YAz81lIKPJCvaLCXNWtwqyU_FSz/view?usp=sharing",
+            pdf_file: "https://drive.google.com/file/d/16kbSUdi5XYgBhS8-R7zi4eTeQITxfsrI/view?usp=drive_link"
+        };
 
-        // 팝업용 정제 데이터
-        const projectData = {
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function parseCSV(text) {
+            const lines = text.trim().split('\n');
+            return lines.map(line => {
+                const values = [];
+                let insideQuote = false;
+                let currentVal = '';
+                for (let i = 0; i < line.length; i++) {
+                    const char = line[i];
+                    if (char === '"') {
+                        insideQuote = !insideQuote;
+                    } else if (char === ',' && !insideQuote) {
+                        values.push(currentVal.trim());
+                        currentVal = '';
+                    } else {
+                        currentVal += char;
+                    }
+                }
+                values.push(currentVal.trim());
+                return values;
+            });
+        }
+
+        let projectData = {
             goodwill: {
                 title: "굿윌스토어 (Goodwill Store)",
-                description: "개인과 기업으로부터 기증받은 중고 물품 및 새 상품을 재가공하여 판매한 수익으로 장애인을 정규직 고용하는 장애인 직업재활시설입니다. 자선이 아닌 일자리를 통한 자립 기회를 제공합니다.",
+                description: "개인과 기업으로부터 기증받은 중고 물품 및 새 상품을 재가공하여 판매한 수익으로 장애인을 정규직 고용하는 장애인 직업재활시설입니다. 자선이 아닌 일자리를 통한 자립 기회를 제공합니다[cite: 1, 2].",
                 stats: [
-                    { label: "전국 매장 수", value: "46개 매장" },
-                    { label: "장애인 근로자 수", value: "480명 정규직" },
-                    { label: "환경 보호 효과", value: "소나무 1,750만 그루" }
+                    { label: "전국 매장 수", value: "46개 매장" },[cite: 1, 2]
+                    { label: "장애인 근로자 수", value: "480명 정규직" },[cite: 1, 2]
+                    { label: "환경 보호 효과", value: "소나무 1,750만 그루" }[cite: 1, 2]
                 ],
                 gallery: [
                     { title: "굿윌스토어 매장 전경", url: "https://via.placeholder.com/400x300?text=Store+View", download: "goodwill_store.jpg" },
-                    { title: "장애인 직원 물류 작업", url: "https://via.placeholder.com/400x300?text=Working+Staff", download: "goodwill_work.jpg" },
-                    { title: "아울렛형 매장 오픈식", url: "https://via.placeholder.com/400x300?text=Grand+Open", download: "goodwill_opening.jpg" }
+                    { title: "장애인 직원 물류 작업", url: "https://via.placeholder.com/400x300?text=Working+Staff", download: "goodwill_work.jpg" }
                 ],
                 press: [
-                    { title: "[한국경제] 기증·소비가 만든 '착한 고용'... 장애인 470명 굿윌스토어에서 새 일자리", date: "2025.07.24", summary: "굿윌스토어가 운영 13년 만에 전국 매장에서 약 470명의 장애인을 고용하며 사회적 기업의 성공 사례로 주목받고 있다.", file: "https://drive.google.com" },
-                    { title: "[보도자료] 밀알복지재단 굿윌스토어, 시니어 협업형 매장 '밀알야탑점' 개점", date: "2025.06.15", summary: "유통 경력 시니어와 장애인 직원이 함께 일하는 최초의 민간 협력형 모델을 선보였다.", file: "https://drive.google.com" },
-                    { title: "[보도자료] 우리금융그룹, 굿윌스토어 매장 건립을 위해 10년간 300억 지원 협약", date: "2023.11.10", summary: "우리금융그룹과의 장기 협약을 통해 전국 단위의 매장 확대 및 장애인 일자리 창출 가속화.", file: "https://drive.google.com" }
+                    { title: "[한국경제] 기증·소비가 만든 '착한 고용'... 장애인 470명 굿윌스토어에서 새 일자리", date: "2025.07.24", summary: "굿윌스토어가 운영 13년 만에 전국 매장에서 약 470명의 장애인을 고용하며 사회적 기업의 성공 사례로 주목받고 있다.", file: DRIVE_LINKS.docx_folder }[cite: 1, 2]
                 ]
             },
             helen: {
                 title: "헬렌켈러센터 & 학습지원센터",
-                description: "국내 최초 보건복지부 지정 '시청각장애인 지원 전담기관'으로 시각과 청각이 함께 손실된 시청각장애인을 위해 의사소통, 점자·촉수화 교육, 아동 맞춤 촉감교육 및 자립 지원을 전담 수행합니다.",
+                description: "국내 최초 보건복지부 지정 '시청각장애인 지원 전담기관'으로 시각과 청각이 함께 손실된 시청각장애인을 위해 의사소통, 점자·촉수화 교육, 아동 맞춤 촉감교육 및 자립 지원을 전담 수행합니다[cite: 1, 2].",
                 stats: [
-                    { label: "국가 지정", value: "보건복지부 전담기관" },
-                    { label: "주요 지원", value: "점자/촉수화/SSP파견" },
-                    { label: "특화 영역", value: "국내 유일 촉감 아동교육" }
+                    { label: "국가 지정", value: "보건복지부 전담기관" },[cite: 1, 2]
+                    { label: "주요 지원", value: "점자/촉수화/SSP파견" },[cite: 1, 2]
+                    { label: "특화 영역", value: "국내 유일 촉감 아동교육" }[cite: 1, 2]
                 ],
                 gallery: [
-                    { title: "점자정보단말기 교육", url: "https://via.placeholder.com/400x300?text=Braille+Education", download: "helen_braille.jpg" },
-                    { title: "시청각장애아동 촉감놀이", url: "https://via.placeholder.com/400x300?text=Tactile+Class", download: "helen_tactile.jpg" },
-                    { title: "제1회 시청각장애인 체육대회", url: "https://via.placeholder.com/400x300?text=Sports+Day", download: "helen_sports.jpg" }
+                    { title: "점자정보단말기 교육", url: "https://via.placeholder.com/400x300?text=Braille+Education", download: "helen_braille.jpg" }
                 ],
                 press: [
-                    { title: "[한겨레] 헬렌켈러센터 통해 소통과 자립의 기회 열어간다", date: "2025.12.10", summary: "국내 유일의 시청각장애인 전담기관으로서 학습지원 및 정보격차 해소, 생애주기별 자립을 돕는 헬렌켈러센터 소개.", file: "https://drive.google.com" },
-                    { title: "[보도자료] 밀알복지재단, 국내 최초 '시청각장애아동 촉감교육 매뉴얼' 발간", date: "2026.08.01", summary: "감각적 제약이 심한 시청각장애아동을 위한 개별화 교육 지침서를 국내 최초로 발간 및 보급.", file: "https://drive.google.com" },
-                    { title: "[보도자료] 제1회 시청각장애인 전국대회 개최... 사회적 고립 해소 모색", date: "2026.10.15", summary: "전국 시청각장애인들이 한자리에 모여 권리 옹호와 사회통합을 논의하는 장 마련.", file: "https://drive.google.com" }
+                    { title: "[한겨레] 헬렌켈러센터 통해 소통과 자립의 기회 열어간다", date: "2025.12.10", summary: "국내 유일의 시청각장애인 전담기관으로서 학습지원 및 정보격차 해소, 생애주기별 자립을 돕는 헬렌켈러센터 소개.", file: DRIVE_LINKS.docx_folder }[cite: 1, 2]
                 ]
             },
             bridgeon: {
                 title: "브릿지온 (Bridge On Arte / Ensemble)",
-                description: "미술(아르떼)과 음악(앙상블)에 재능 있는 성인 발달장애인을 정규직 예술인으로 고용하여 안정적인 예술 활동과 장애인식 개선 연주회 및 전시회를 펼치는 사업입니다.",
+                description: "미술(아르떼)과 음악(앙상블)에 재능 있는 성인 발달장애인을 정규직 예술인으로 고용하여 안정적인 예술 활동과 장애인식 개선 연주회 및 전시회를 펼치는 사업입니다[cite: 1, 2].",
                 stats: [
-                    { label: "고용 형태", value: "정규직 예술인 고용" },
-                    { label: "앙상블 공연", value: "연 80회 이상 전국 연주" },
-                    { label: "아르떼 미술", value: "매년 정기 전시회 개최" }
+                    { label: "고용 형태", value: "정규직 예술인 고용" },[cite: 1, 2]
+                    { label: "앙상블 공연", value: "연 80회 이상 전국 연주" },[cite: 1, 2]
+                    { label: "아르떼 미술", value: "매년 정기 전시회 개최" }[cite: 1, 2]
                 ],
                 gallery: [
-                    { title: "브릿지온 아르떼 전시 현장", url: "https://via.placeholder.com/400x300?text=Arte+Exhibition", download: "bridgeon_arte.jpg" },
-                    { title: "브릿지온 앙상블 정기연주", url: "https://via.placeholder.com/400x300?text=Ensemble+Concert", download: "bridgeon_ensemble.jpg" },
-                    { title: "정영주 배우 아이엠어뮤지션 캠페인", url: "https://via.placeholder.com/400x300?text=Campaign+Photo", download: "bridgeon_campaign.jpg" }
+                    { title: "브릿지온 아르떼 전시 현장", url: "https://via.placeholder.com/400x300?text=Arte+Exhibition", download: "bridgeon_arte.jpg" }
                 ],
                 press: [
-                    { title: "[뉴시스] 기업은행, 발달장애 작가 육성 'IBK드림윙즈' 전시회 개최", date: "2025.02.04", summary: "IBK기업은행과 협력하여 발달장애 작가들의 작품을 본점 로비에 전시하고 창작 활동 지원.", file: "https://drive.google.com" },
-                    { title: "[한국일보] 정영주 배우, 발달장애인 예술가 알리는 '아이 엠 어 뮤지션' 참여", date: "2025.12.23", summary: "홍보대사 정영주 배우가 발달장애 연주자들의 자립과 직업 예술인 활동을 응원하는 캠페인 참여.", file: "https://drive.google.com" },
-                    { title: "[보도자료] 브릿지온 앙상블, 장애인식개선 직장 내 의무교육 출장 연주 80회 돌파", date: "2025.11.30", summary: "기업 및 공공기관 대상 감동적인 클래식 연주를 통해 자연스러운 장애인식개선 도모.", file: "https://drive.google.com" }
+                    { title: "[뉴시스] 기업은행, 발달장애 작가 육성 'IBK드림윙즈' 전시회 개최", date: "2025.02.04", summary: "IBK기업은행과 협력하여 발달장애 작가들의 작품을 본점 로비에 전시하고 창작 활동 지원.", file: DRIVE_LINKS.docx_folder }[cite: 1, 2]
                 ]
             }
         };
 
-        // 모달 열기 함수
+        async function loadMainStats() {
+            try {
+                const res = await fetch(SHEET_URLS.main_stats);
+                const text = await res.text();
+                const rows = parseCSV(text);
+                const data = {};
+                rows.forEach(row => { if (row[0] && row[1]) data[row[0]] = row[1]; });
+
+                if (data.eval_rating) document.getElementById('stat-eval').innerText = data.eval_rating;
+                if (data.donation_amount) document.getElementById('stat-donation').innerText = data.donation_amount;
+                if (data.goodwill_stores) document.getElementById('stat-store').innerText = data.goodwill_stores + ' 매장';
+                if (data.beneficiaries) document.getElementById('stat-beneficiaries').innerText = data.beneficiaries;
+                if (data.domestic_facilities) document.getElementById('stat-domestic').innerText = data.domestic_facilities;
+                if (data.global_facilities) document.getElementById('stat-global').innerText = data.global_facilities;
+            } catch (e) { console.error('main_stats 로드 실패:', e); }
+        }
+
+        async function loadProjectModals() {
+            try {
+                const res = await fetch(SHEET_URLS.project_modals);
+                const text = await res.text();
+                const rows = parseCSV(text);
+                const headers = rows.shift();
+
+                rows.forEach(row => {
+                    const item = {};
+                    headers.forEach((h, i) => item[h] = row[i]);
+                    const key = item.project_key;
+                    
+                    if (key && projectData[key]) {
+                        if (item.title) projectData[key].title = item.title;
+                        if (item.description) projectData[key].description = item.description;
+                        
+                        projectData[key].stats = [
+                            { label: item.stat1_label || '주요 지표 1', value: item.stat1_val || '-' },
+                            { label: item.stat2_label || '주요 지표 2', value: item.stat2_val || '-' },
+                            { label: item.stat3_label || '주요 지표 3', value: item.stat3_val || '-' }
+                        ];
+
+                        const pressList = [];
+                        if (item.press1_title) pressList.push({ title: item.press1_title, date: item.press1_date, summary: item.press1_summary, file: item.press1_file || DRIVE_LINKS.docx_folder });
+                        if (item.press2_title) pressList.push({ title: item.press2_title, date: item.press2_date, summary: item.press2_summary, file: item.press2_file || DRIVE_LINKS.docx_folder });
+                        if (item.press3_title) pressList.push({ title: item.press3_title, date: item.press3_date, summary: item.press3_summary, file: item.press3_file || DRIVE_LINKS.docx_folder });
+                        
+                        if (pressList.length > 0) projectData[key].press = pressList;
+                    }
+                });
+            } catch (e) { console.error('project_modals 로드 실패:', e); }
+        }
+
+        async function loadSchedule() {
+            try {
+                const res = await fetch(SHEET_URLS.schedule);
+                const text = await res.text();
+                const rows = parseCSV(text);
+                const headers = rows.shift();
+
+                const container = document.getElementById('schedule-timeline');
+                if (!container) return;
+
+                let html = '';
+                rows.forEach(row => {
+                    const item = {};
+                    headers.forEach((h, i) => item[h] = row[i]);
+
+                    if (item.month) {
+                        const isHighlight = item.month.includes('10');
+                        const badgeColor = isHighlight ? 'bg-miral-red' : 'bg-miral-green';
+                        const monthTextColor = isHighlight ? 'text-miral-red' : 'text-miral-green';
+
+                        html += `
+                            <div class="relative pl-6 md:pl-8 group">
+                                <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full ${badgeColor} text-white font-black text-xs flex items-center justify-center shadow-md">
+                                    ${item.month}
+                                </div>
+                                <div class="hidden md:block absolute -left-28 top-1 text-right w-20 font-black ${monthTextColor} text-lg">
+                                    ${item.month_en || ''}
+                                </div>
+                                
+                                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:border-miral-green transition-colors">
+                                    <div class="flex flex-wrap items-center gap-2 mb-3">
+                                        ${item.tag1 ? `<span class="bg-emerald-50 text-miral-green border border-emerald-200 text-[11px] font-bold px-2.5 py-0.5 rounded-full">${item.tag1}</span>` : ''}
+                                        ${item.tag2 ? `<span class="bg-emerald-50 text-miral-green border border-emerald-200 text-[11px] font-bold px-2.5 py-0.5 rounded-full">${item.tag2}</span>` : ''}
+                                    </div>
+                                    <h3 class="text-base font-bold text-gray-900 mb-2">${item.title || ''}</h3>
+                                    <p class="text-xs text-gray-600 leading-relaxed mb-3">${item.description || ''}</p>
+                                    ${item.point ? `
+                                        <div class="bg-gray-50 p-3 rounded-lg border border-gray-100 text-[11px] text-gray-500">
+                                            <strong class="text-miral-green">💡 취재 포인트:</strong> ${item.point}
+                                        </div>
+                                    ` : ''}
+                                </div>
+                            </div>
+                        `;
+                    }
+                });
+
+                if (html) container.innerHTML = html;
+            } catch (e) { console.error('schedule 로드 실패:', e); }
+        }
+
         function openModal(key) {
             const data = projectData[key];
             if (!data) return;
@@ -812,7 +820,7 @@
             document.getElementById('modalDescription').innerText = data.description;
 
             const statsContainer = document.getElementById('modalStats');
-            statsContainer.innerHTML = data.stats.map(s => `
+            statsContainer.innerHTML = (data.stats || []).map(s => `
                 <div class="text-center p-2 bg-white rounded-lg border border-emerald-100 shadow-sm">
                     <div class="text-xs text-gray-500">${s.label}</div>
                     <div class="text-sm font-bold text-miral-green mt-0.5">${s.value}</div>
@@ -820,7 +828,7 @@
             `).join('');
 
             const galleryContainer = document.getElementById('modalGallery');
-            galleryContainer.innerHTML = data.gallery.map(g => `
+            galleryContainer.innerHTML = (data.gallery || []).map(g => `
                 <div class="relative group rounded-xl overflow-hidden border border-gray-200">
                     <img src="${g.url}" alt="${g.title}" class="w-full h-32 object-cover">
                     <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-2 text-center">
@@ -833,62 +841,40 @@
             `).join('');
 
             const pressContainer = document.getElementById('modalPressReleases');
-            pressContainer.innerHTML = data.press.map(p => `
+            pressContainer.innerHTML = (data.press || []).map(p => `
                 <div class="p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-miral-green transition-colors">
                     <div class="flex justify-between items-start mb-1">
                         <h5 class="font-bold text-xs text-gray-900">${p.title}</h5>
-                        <span class="text-[10px] text-gray-400 shrink-0 ml-2">${p.date}</span>
+                        <span class="text-[10px] text-gray-400 shrink-0 ml-2">${p.date || ''}</span>
                     </div>
-                    <p class="text-xs text-gray-600 leading-snug mb-3">${p.summary}</p>
-                    <a href="${p.file}" target="_blank" class="inline-flex items-center text-[11px] text-miral-green font-bold hover:underline">
+                    <p class="text-xs text-gray-600 leading-snug mb-3">${p.summary || ''}</p>
+                    <a href="${p.file || DRIVE_LINKS.docx_folder}" target="_blank" class="inline-flex items-center text-[11px] text-miral-green font-bold hover:underline">
                         <i class="fa-solid fa-file-word mr-1 text-blue-600"></i> 구글 드라이브에서 보도자료(DOCX) 열기
                     </a>
                 </div>
             `).join('');
 
-            const modal = document.getElementById('projectModal');
-            modal.classList.remove('hidden');
+            document.getElementById('projectModal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         }
 
-        // 모달 닫기 함수
         function closeModal() {
-            const modal = document.getElementById('projectModal');
-            modal.classList.add('hidden');
+            document.getElementById('projectModal').classList.add('hidden');
             document.body.style.overflow = 'auto';
         }
 
-        // 구글 시트 데이터 로더
-        const SHEET_CSV_URL = 'YOUR_GOOGLE_SHEET_CSV_URL';
+        window.addEventListener('DOMContentLoaded', () => {
+            if (document.getElementById('drive-logo-link')) document.getElementById('drive-logo-link').href = DRIVE_LINKS.logo_folder;
+            if (document.getElementById('drive-zip-link')) document.getElementById('drive-zip-link').href = DRIVE_LINKS.logo_zip;
+            if (document.getElementById('drive-img-link')) document.getElementById('drive-img-link').href = DRIVE_LINKS.img_folder;
+            if (document.getElementById('drive-docx-link')) document.getElementById('drive-docx-link').href = DRIVE_LINKS.docx_folder;
+            if (document.getElementById('drive-pdf-folder-link')) document.getElementById('drive-pdf-folder-link').href = DRIVE_LINKS.pdf_folder;
+            if (document.getElementById('drive-pdf-file-link')) document.getElementById('drive-pdf-file-link').href = DRIVE_LINKS.pdf_file;
 
-        async function updatePressKitData() {
-            if (!SHEET_CSV_URL || SHEET_CSV_URL === 'YOUR_GOOGLE_SHEET_CSV_URL') return;
-            try {
-                const response = await fetch(SHEET_CSV_URL);
-                const data = await response.text();
-                const rows = data.split('\n');
-                const sheetData = {};
-                
-                rows.forEach(row => {
-                    const [key, value] = row.split(',');
-                    if (key && value) {
-                        sheetData[key.trim()] = value.trim();
-                    }
-                });
-
-                if (sheetData.eval_rating) document.getElementById('stat-eval').innerText = sheetData.eval_rating;
-                if (sheetData.donation_amount) document.getElementById('stat-donation').innerText = sheetData.donation_amount;
-                if (sheetData.goodwill_stores) document.getElementById('stat-store').innerText = sheetData.goodwill_stores + ' 매장';
-                if (sheetData.beneficiaries) document.getElementById('stat-beneficiaries').innerText = sheetData.beneficiaries;
-                if (sheetData.domestic_facilities) document.getElementById('stat-domestic').innerText = sheetData.domestic_facilities;
-                if (sheetData.global_facilities) document.getElementById('stat-global').innerText = sheetData.global_facilities;
-
-            } catch (error) {
-                console.error('구글 시트 연동 오류:', error);
-            }
-        }
-
-        window.addEventListener('DOMContentLoaded', updatePressKitData);
+            loadMainStats();
+            loadProjectModals();
+            loadSchedule();
+        });
     </script>
 </body>
 </html>
