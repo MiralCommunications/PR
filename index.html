@@ -82,7 +82,7 @@
                     <i class="fa-solid fa-pen-to-square mr-2"></i> Quick 취재 요청
                 </a>
                 <a href="#media" class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl backdrop-blur-md border border-white/20 transition-all flex items-center justify-center">
-                    <i class="fa-solid fa-download mr-2"></i> 미디어 킷 다운로드
+                    <i class="fa-solid fa-folder-open mr-2"></i> 미디어 킷 다운로드
                 </a>
             </div>
         </div>
@@ -527,41 +527,68 @@
         </div>
     </section>
 
-    <!-- Media & Asset Download Section -->
+    <!-- Media & Asset Download Section (구글 드라이브 연동) -->
     <section id="media" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold text-gray-900">미디어 킷 & 보도자료</h2>
+                <h2 class="text-3xl font-bold text-gray-900">미디어 킷 & 보도자료 구글 드라이브</h2>
+                <p class="text-gray-500 text-sm mt-2">구글 드라이브를 통해 고화질 로고, 이미지, 연차보고서, 보도자료를 상시 다운로드하실 수 있습니다.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6 mb-12">
-                <div class="p-6 bg-gray-50 rounded-xl border border-gray-200 flex items-center justify-between">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- 01_공식로고 -->
+                <div class="p-6 bg-gray-50 rounded-2xl border border-gray-200 flex flex-col justify-between hover:border-miral-green transition-colors">
                     <div>
-                        <h4 class="font-bold text-gray-900 text-sm">공식 CI / 로고 팩</h4>
-                        <p class="text-xs text-gray-500 mt-1">AI, PNG high-res</p>
+                        <div class="w-10 h-10 bg-emerald-100 text-miral-green rounded-xl flex items-center justify-center text-lg font-bold mb-4">
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-base mb-1">공식 CI / 로고 폴더</h4>
+                        <p class="text-xs text-gray-500 mb-6">AI, PNG 고화질 로고 자산 포함</p>
                     </div>
-                    <a href="miral_logo.zip" download class="px-3 py-2 bg-white border border-gray-300 rounded-lg text-xs font-bold hover:border-miral-green hover:text-miral-green transition-colors inline-flex items-center">
-                        <i class="fa-solid fa-download mr-1"></i> 받기
+                    <a id="drive-logo-link" href="#" target="_blank" class="w-full py-2.5 bg-white border border-gray-300 rounded-lg text-xs font-bold text-gray-700 hover:bg-miral-green hover:text-white hover:border-miral-green transition-colors flex items-center justify-center">
+                        <i class="fa-solid fa-folder-open mr-1.5"></i> 01_공식로고 열기
                     </a>
                 </div>
 
-                <div class="p-6 bg-gray-50 rounded-xl border border-gray-200 flex items-center justify-between">
+                <!-- 02_대표이미지 -->
+                <div class="p-6 bg-gray-50 rounded-2xl border border-gray-200 flex flex-col justify-between hover:border-miral-green transition-colors">
                     <div>
-                        <h4 class="font-bold text-gray-900 text-sm">2026 프레스킷 PDF</h4>
-                        <p class="text-xs text-gray-500 mt-1">전체 사업 소개서 (13p)</p>
+                        <div class="w-10 h-10 bg-emerald-100 text-miral-green rounded-xl flex items-center justify-center text-lg font-bold mb-4">
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-base mb-1">대표 이미지 스틸컷</h4>
+                        <p class="text-xs text-gray-500 mb-6">사업별 대표 보도용 고화질 사진</p>
                     </div>
-                    <a href="presskit2026.pdf" download class="px-3 py-2 bg-white border border-gray-300 rounded-lg text-xs font-bold hover:border-miral-green hover:text-miral-green transition-colors inline-flex items-center">
-                        <i class="fa-solid fa-download mr-1"></i> 받기
+                    <a id="drive-img-link" href="#" target="_blank" class="w-full py-2.5 bg-white border border-gray-300 rounded-lg text-xs font-bold text-gray-700 hover:bg-miral-green hover:text-white hover:border-miral-green transition-colors flex items-center justify-center">
+                        <i class="fa-solid fa-folder-open mr-1.5"></i> 02_대표이미지 열기
                     </a>
                 </div>
 
-                <div class="p-6 bg-gray-50 rounded-xl border border-gray-200 flex items-center justify-between">
+                <!-- 03_보도자료DOCX -->
+                <div class="p-6 bg-gray-50 rounded-2xl border border-gray-200 flex flex-col justify-between hover:border-miral-green transition-colors">
                     <div>
-                        <h4 class="font-bold text-gray-900 text-sm">대표 사업 고화질 스틸컷</h4>
-                        <p class="text-xs text-gray-500 mt-1">굿윌스토어/헬렌켈러 등</p>
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-lg font-bold mb-4">
+                            <i class="fa-solid fa-file-word"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-base mb-1">보도자료 (DOCX)</h4>
+                        <p class="text-xs text-gray-500 mb-6">최신 배포 보도자료 워드 파일</p>
                     </div>
-                    <a href="images.zip" download class="px-3 py-2 bg-white border border-gray-300 rounded-lg text-xs font-bold hover:border-miral-green hover:text-miral-green transition-colors inline-flex items-center">
-                        <i class="fa-solid fa-download mr-1"></i> 받기
+                    <a id="drive-docx-link" href="#" target="_blank" class="w-full py-2.5 bg-white border border-gray-300 rounded-lg text-xs font-bold text-gray-700 hover:bg-miral-green hover:text-white hover:border-miral-green transition-colors flex items-center justify-center">
+                        <i class="fa-solid fa-folder-open mr-1.5"></i> 03_보도자료DOCX 열기
+                    </a>
+                </div>
+
+                <!-- 04_연차보고서PDF -->
+                <div class="p-6 bg-gray-50 rounded-2xl border border-gray-200 flex flex-col justify-between hover:border-miral-green transition-colors">
+                    <div>
+                        <div class="w-10 h-10 bg-red-100 text-miral-red rounded-xl flex items-center justify-center text-lg font-bold mb-4">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-base mb-1">연차보고서 & 프레스킷</h4>
+                        <p class="text-xs text-gray-500 mb-6">2026 프레스킷 및 연차보고서 PDF</p>
+                    </div>
+                    <a id="drive-pdf-link" href="#" target="_blank" class="w-full py-2.5 bg-white border border-gray-300 rounded-lg text-xs font-bold text-gray-700 hover:bg-miral-green hover:text-white hover:border-miral-green transition-colors flex items-center justify-center">
+                        <i class="fa-solid fa-folder-open mr-1.5"></i> 04_연차보고서PDF 열기
                     </a>
                 </div>
             </div>
@@ -700,8 +727,24 @@
 
     <!-- Script Engine -->
     <script>
-        // 기본 팝업 데이터 정의
-        let projectData = {
+        // 🔗 구글 드라이브 세부 폴더 공유 링크를 여기에 입력하세요!
+        const DRIVE_LINKS = {
+            logo: "https://drive.google.com/drive/folders/1Oe_naa995bI8GkJGpdO2GYU3Fi_NMfhk?usp=sharing",
+            image: "https://drive.google.com/drive/folders/1Kmb6XZnmAmRPShfT_1thS2WeKdG88Lsx?usp=drive_link",
+            docx: "https://drive.google.com/drive/folders/1PtEvHyB9XUkp-8h-8LBFpN0I9cDnBvns?usp=drive_link",
+            pdf: "https://drive.google.com/drive/folders/1SO_wb23oG8CbTEBC8thQ3hqElE1u-YkU?usp=drive_link"
+        };
+
+        // 구글 드라이브 링크 버튼 자동 연동
+        document.addEventListener('DOMContentLoaded', () => {
+            if (document.getElementById('drive-logo-link')) document.getElementById('drive-logo-link').href = DRIVE_LINKS.logo;
+            if (document.getElementById('drive-img-link')) document.getElementById('drive-img-link').href = DRIVE_LINKS.image;
+            if (document.getElementById('drive-docx-link')) document.getElementById('drive-docx-link').href = DRIVE_LINKS.docx;
+            if (document.getElementById('drive-pdf-link')) document.getElementById('drive-pdf-link').href = DRIVE_LINKS.pdf;
+        });
+
+        // 사업별 모달 팝업 데이터
+        const projectData = {
             goodwill: {
                 title: "굿윌스토어 (Goodwill Store)",
                 description: "개인과 기업으로부터 기증받은 중고 물품 및 새 상품을 재가공하여 판매한 수익으로 장애인을 정규직 고용하는 장애인 직업재활시설입니다. 자선이 아닌 일자리를 통한 자립 기회를 제공합니다[cite: 1, 2].",
@@ -716,9 +759,9 @@
                     { title: "아울렛형 매장 오픈식", url: "https://via.placeholder.com/400x300?text=Grand+Open", download: "goodwill_opening.jpg" }
                 ],
                 press: [
-                    { title: "[한국경제] 기증·소비가 만든 '착한 고용'... 장애인 470명 굿윌스토어에서 새 일자리", date: "2025.07.24", summary: "굿윌스토어가 운영 13년 만에 전국 매장에서 약 470명의 장애인을 고용하며 사회적 기업의 성공 사례로 주목받고 있다.", file: "https://drive.google.com" },[cite: 1, 2]
-                    { title: "[보도자료] 밀알복지재단 굿윌스토어, 시니어 협업형 매장 '밀알야탑점' 개점", date: "2025.06.15", summary: "유통 경력 시니어와 장애인 직원이 함께 일하는 최초의 민간 협력형 모델을 선보였다.", file: "https://drive.google.com" },[cite: 1, 2]
-                    { title: "[보도자료] 우리금융그룹, 굿윌스토어 매장 건립을 위해 10년간 300억 지원 협약", date: "2023.11.10", summary: "우리금융그룹과의 장기 협약을 통해 전국 단위의 매장 확대 및 장애인 일자리 창출 가속화.", file: "https://drive.google.com" }[cite: 1, 2]
+                    { title: "[한국경제] 기증·소비가 만든 '착한 고용'... 장애인 470명 굿윌스토어에서 새 일자리", date: "2025.07.24", summary: "굿윌스토어가 운영 13년 만에 전국 매장에서 약 470명의 장애인을 고용하며 사회적 기업의 성공 사례로 주목받고 있다.", file: DRIVE_LINKS.docx },[cite: 1, 2]
+                    { title: "[보도자료] 밀알복지재단 굿윌스토어, 시니어 협업형 매장 '밀알야탑점' 개점", date: "2025.06.15", summary: "유통 경력 시니어와 장애인 직원이 함께 일하는 최초의 민간 협력형 모델을 선보였다.", file: DRIVE_LINKS.docx },[cite: 1, 2]
+                    { title: "[보도자료] 우리금융그룹, 굿윌스토어 매장 건립을 위해 10년간 300억 지원 협약", date: "2023.11.10", summary: "우리금융그룹과의 장기 협약을 통해 전국 단위의 매장 확대 및 장애인 일자리 창출 가속화.", file: DRIVE_LINKS.docx }[cite: 1, 2]
                 ]
             },
             helen: {
@@ -735,9 +778,9 @@
                     { title: "제1회 시청각장애인 체육대회", url: "https://via.placeholder.com/400x300?text=Sports+Day", download: "helen_sports.jpg" }
                 ],
                 press: [
-                    { title: "[한겨레] 헬렌켈러센터 통해 소통과 자립의 기회 열어간다", date: "2025.12.10", summary: "국내 유일의 시청각장애인 전담기관으로서 학습지원 및 정보격차 해소, 생애주기별 자립을 돕는 헬렌켈러센터 소개.", file: "https://drive.google.com" },[cite: 1, 2]
-                    { title: "[보도자료] 밀알복지재단, 국내 최초 '시청각장애아동 촉감교육 매뉴얼' 발간", date: "2026.08.01", summary: "감각적 제약이 심한 시청각장애아동을 위한 개별화 교육 지침서를 국내 최초로 발간 및 보급.", file: "https://drive.google.com" },[cite: 1, 2]
-                    { title: "[보도자료] 제1회 시청각장애인 전국대회 개최... 사회적 고립 해소 모색", date: "2026.10.15", summary: "전국 시청각장애인들이 한자리에 모여 권리 옹호와 사회통합을 논의하는 장 마련.", file: "https://drive.google.com" }[cite: 1, 2]
+                    { title: "[한겨레] 헬렌켈러센터 통해 소통과 자립의 기회 열어간다", date: "2025.12.10", summary: "국내 유일의 시청각장애인 전담기관으로서 학습지원 및 정보격차 해소, 생애주기별 자립을 돕는 헬렌켈러센터 소개.", file: DRIVE_LINKS.docx },[cite: 1, 2]
+                    { title: "[보도자료] 밀알복지재단, 국내 최초 '시청각장애아동 촉감교육 매뉴얼' 발간", date: "2026.08.01", summary: "감각적 제약이 심한 시청각장애아동을 위한 개별화 교육 지침서를 국내 최초로 발간 및 보급.", file: DRIVE_LINKS.docx },[cite: 1, 2]
+                    { title: "[보도자료] 제1회 시청각장애인 전국대회 개최... 사회적 고립 해소 모색", date: "2026.10.15", summary: "전국 시청각장애인들이 한자리에 모여 권리 옹호와 사회통합을 논의하는 장 마련.", file: DRIVE_LINKS.docx }[cite: 1, 2]
                 ]
             },
             bridgeon: {
@@ -754,14 +797,13 @@
                     { title: "정영주 배우 아이엠어뮤지션 캠페인", url: "https://via.placeholder.com/400x300?text=Campaign+Photo", download: "bridgeon_campaign.jpg" }
                 ],
                 press: [
-                    { title: "[뉴시스] 기업은행, 발달장애 작가 육성 'IBK드림윙즈' 전시회 개최", date: "2025.02.04", summary: "IBK기업은행과 협력하여 발달장애 작가들의 작품을 본점 로비에 전시하고 창작 활동 지원.", file: "https://drive.google.com" },[cite: 1, 2]
-                    { title: "[한국일보] 정영주 배우, 발달장애인 예술가 알리는 '아이 엠 어 뮤지션' 참여", date: "2025.12.23", summary: "홍보대사 정영주 배우가 발달장애 연주자들의 자립과 직업 예술인 활동을 응원하는 캠페인 참여.", file: "https://drive.google.com" },[cite: 1, 2]
-                    { title: "[보도자료] 브릿지온 앙상블, 장애인식개선 직장 내 의무교육 출장 연주 80회 돌파", date: "2025.11.30", summary: "기업 및 공공기관 대상 감동적인 클래식 연주를 통해 자연스러운 장애인식개선 도모.", file: "https://drive.google.com" }[cite: 1, 2]
+                    { title: "[뉴시스] 기업은행, 발달장애 작가 육성 'IBK드림윙즈' 전시회 개최", date: "2025.02.04", summary: "IBK기업은행과 협력하여 발달장애 작가들의 작품을 본점 로비에 전시하고 창작 활동 지원.", file: DRIVE_LINKS.docx },[cite: 1, 2]
+                    { title: "[한국일보] 정영주 배우, 발달장애인 예술가 알리는 '아이 엠 어 뮤지션' 참여", date: "2025.12.23", summary: "홍보대사 정영주 배우가 발달장애 연주자들의 자립과 직업 예술인 활동을 응원하는 캠페인 참여.", file: DRIVE_LINKS.docx },[cite: 1, 2]
+                    { title: "[보도자료] 브릿지온 앙상블, 장애인식개선 직장 내 의무교육 출장 연주 80회 돌파", date: "2025.11.30", summary: "기업 및 공공기관 대상 감동적인 클래식 연주를 통해 자연스러운 장애인식개선 도모.", file: DRIVE_LINKS.docx }[cite: 1, 2]
                 ]
             }
         };
 
-        // 모달 제어 함수
         function openModal(key) {
             const data = projectData[key];
             if (!data) return;
@@ -769,7 +811,6 @@
             document.getElementById('modalTitle').innerText = data.title;
             document.getElementById('modalDescription').innerText = data.description;
 
-            // Stats 렌더링
             const statsContainer = document.getElementById('modalStats');
             statsContainer.innerHTML = data.stats.map(s => `
                 <div class="text-center p-2 bg-white rounded-lg border border-emerald-100 shadow-sm">
@@ -778,7 +819,6 @@
                 </div>
             `).join('');
 
-            // Gallery 렌더링
             const galleryContainer = document.getElementById('modalGallery');
             galleryContainer.innerHTML = data.gallery.map(g => `
                 <div class="relative group rounded-xl overflow-hidden border border-gray-200">
@@ -792,7 +832,6 @@
                 </div>
             `).join('');
 
-            // Press Release 렌더링 (구글 드라이브 DOCX 파일 링크 연동 지원)
             const pressContainer = document.getElementById('modalPressReleases');
             pressContainer.innerHTML = data.press.map(p => `
                 <div class="p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-miral-green transition-colors">
@@ -802,7 +841,7 @@
                     </div>
                     <p class="text-xs text-gray-600 leading-snug mb-3">${p.summary}</p>
                     <a href="${p.file}" target="_blank" class="inline-flex items-center text-[11px] text-miral-green font-bold hover:underline">
-                        <i class="fa-solid fa-file-word mr-1 text-blue-600"></i> 보도자료 파일(DOCX) 열기/다운로드
+                        <i class="fa-solid fa-file-word mr-1 text-blue-600"></i> 구글 드라이브에서 보도자료(DOCX) 열기
                     </a>
                 </div>
             `).join('');
@@ -818,7 +857,7 @@
             document.body.style.overflow = 'auto';
         }
 
-        // 구글 시트 데이터 자동 동기화 (시트1: main_stats 연동)
+        // 구글 시트 연동 함수
         const SHEET_CSV_URL = 'YOUR_GOOGLE_SHEET_CSV_URL';
 
         async function updatePressKitData() {
